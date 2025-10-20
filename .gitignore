@@ -1,0 +1,12 @@
+timing.txt
+PDES.dll
+createDLL.bat
+
+# Imgui
+imgui.ini
+
+# Visual Studio
+.vs/
+generated/
+models/**/*_output/
+/models/FlowersToRerender.7z

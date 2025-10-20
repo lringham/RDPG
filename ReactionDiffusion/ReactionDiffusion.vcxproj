@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7E8AF6D-E995-4C9D-8C5D-FB20B10C703D}</ProjectGuid>
+    <RootNamespace>ReactionDiffusion</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)generated\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)generated\inter\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)generated\inter\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)generated\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\middleware\glad\include;$(ProjectDir)..\middleware\glfw\include;$(ProjectDir)..\middleware\catch\include;$(ProjectDir)..\middleware\stb;$(ProjectDir)..\middleware\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions> NOMINMAX;DEBUG;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\middleware\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\middleware\glad\include;$(ProjectDir)..\middleware\glfw\include;$(ProjectDir)..\middleware\catch\include;$(ProjectDir)..\middleware\stb;$(ProjectDir)..\middleware\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;NOMINMAX;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\middleware\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\middleware\glad\src\glad.c" />
+    <ClCompile Include="..\middleware\imgui\imgui.cpp" />
+    <ClCompile Include="..\middleware\imgui\imgui_color_gradient.cpp" />
+    <ClCompile Include="..\middleware\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\middleware\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\middleware\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\middleware\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\middleware\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="BSpline.cpp" />
+    <ClCompile Include="BVH.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraController.cpp" />
+    <ClCompile Include="CmdArgsParser.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="ColorMap.cpp" />
+    <ClCompile Include="ColorShader.cpp" />
+    <ClCompile Include="ComputeShader.cpp" />
+    <ClCompile Include="Cursor.cpp" />
+    <ClCompile Include="DefaultController.cpp" />
+    <ClCompile Include="DefaultShader.cpp" />
+    <ClCompile Include="DynamicLibLoader.cpp" />
+    <ClCompile Include="EventHandler.cpp" />
+    <ClCompile Include="EventListener.cpp" />
+    <ClCompile Include="GPUSimulation.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="GridShader.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="LineLoop.cpp" />
+    <ClCompile Include="Lines.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mat2.cpp" />
+    <ClCompile Include="Mat3.cpp" />
+    <ClCompile Include="Mat4.cpp" />
+    <ClCompile Include="Nran.cpp" />
+    <ClCompile Include="ObjModel.cpp" />
+    <ClCompile Include="HalfEdgeMesh.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Drawable.cpp" />
+    <ClCompile Include="BSplinePatch.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
+    <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="RDPG.cpp" />
+    <ClCompile Include="ResourceLocations.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="SimulationDomain.cpp" />
+    <ClCompile Include="SimulationLoader.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Counter.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="Trackball.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Vec2.cpp" />
+    <ClCompile Include="Vec3.cpp" />
+    <ClCompile Include="Vec4.cpp" />
+    <ClCompile Include="Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\middleware\imgui\imconfig.h" />
+    <ClInclude Include="..\middleware\imgui\imgui.h" />
+    <ClInclude Include="..\middleware\imgui\imgui_color_gradient.h" />
+    <ClInclude Include="..\middleware\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="..\middleware\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\middleware\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\middleware\imgui\imgui_internal.h" />
+    <ClInclude Include="..\middleware\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\middleware\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\middleware\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\middleware\imgui\stb_rect_pack.h" />
+    <ClInclude Include="..\middleware\imgui\stb_textedit.h" />
+    <ClInclude Include="..\middleware\imgui\stb_truetype.h" />
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="App.h" />
+    <ClInclude Include="BSpline.h" />
+    <ClInclude Include="BVH.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraController.h" />
+    <ClInclude Include="CmdArgsParser.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="ColorMap.h" />
+    <ClInclude Include="ColorShader.h" />
+    <ClInclude Include="ComputeShader.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="Curve.h" />
+    <ClInclude Include="DefaultShader.h" />
+    <ClInclude Include="DynamicLibLoader.h" />
+    <ClInclude Include="EventListener.h" />
+    <ClInclude Include="GPUGrid.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="GridComputeShader.h" />
+    <ClInclude Include="GridShader.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="LOG.h" />
+    <ClInclude Include="Mat2.h" />
+    <ClInclude Include="Mat3.h" />
+    <ClInclude Include="Mat4.h" />
+    <ClInclude Include="DefaultController.h" />
+    <ClInclude Include="EventHandler.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GPUSimulation.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="LineLoop.h" />
+    <ClInclude Include="Lines.h" />
+    <ClInclude Include="MeshComputeShader.h" />
+    <ClInclude Include="Nran.h" />
+    <ClInclude Include="BSplinePatch.h" />
+    <ClInclude Include="Textures.h" />
+    <ClInclude Include="HalfEdgeMesh.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Drawable.h" />
+    <ClInclude Include="ObjModel.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Ply.h" />
+    <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="Ray.h" />
+    <ClInclude Include="RDPG.h" />
+    <ClInclude Include="ReactionDiffusionComputeShader.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="ResourceLocations.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Simulation.h" />
+    <ClInclude Include="SimulationDomain.h" />
+    <ClInclude Include="SimulationLoader.h" />
+    <ClInclude Include="Counter.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="Trackball.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vec2.h" />
+    <ClInclude Include="Vec3.h" />
+    <ClInclude Include="Vec4.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\shaders\gridComputeShader.glsl" />
+    <None Include="..\res\shaders\gridFragment.glsl" />
+    <None Include="..\res\shaders\gridVertex.glsl" />
+    <None Include="..\res\shaders\meshComputeShader.glsl" />
+    <None Include="..\res\shaders\defaultFragment.glsl" />
+    <None Include="..\res\shaders\defaultVertex.glsl" />
+    <None Include="..\res\shaders\meshComputeShaderStochastic.glsl" />
+    <None Include="createDLL.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\res\SimConfig.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

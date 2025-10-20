@@ -1,0 +1,58 @@
+#############################################
+# Resources
+#############################################
+ModelsPath: ../res/models/
+ColorMapsPath: ../res/colormaps/
+ShadersPath: ../res/shaders/
+
+# The following parameters correspond to the Gray-Scott model 	
+#domain: denseIcosphere.obj
+domain: mesh
+xRes: 50
+yRes: 50
+width: 3
+height: 3
+
+colorMap: color.colors
+
+morphogens: A, S, T
+#veinMorph: A
+
+maxFaceArea: 0.000613401
+growing: false
+growthX: 1e-06
+growthY: 0
+growthZ: 0
+
+growthTickLimit: 0
+prepatternUseSquareT0: 0
+prepatternUseSquareT1: 0
+
+params:
+{
+    indices: all
+    dt: 0.1
+    Da: 0.0005
+    Ds: 0.001
+    f: 0.06
+    k: 0.063
+}
+initialConditions:
+{
+    indices: all
+    A: 0
+    S: 0
+    T: 0
+
+}
+rdModel: CPU
+{
+    Prepattern p;
+    Morphogens a, s, t;
+
+    float saa = s*a*a;
+    a' =  saa - (k + f) * a + Da * diffusion(a);
+    s' = -saa + f * (1 - s) + Ds * diffusion(s);
+
+    t' = -t * 0.00f + a * .015;
+}

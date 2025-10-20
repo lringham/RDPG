@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{99b600ec-8efd-4868-9fd4-7240b4402868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\external">
+      <UniqueIdentifier>{a4128368-4b49-4214-8bbb-25036db708f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\glslShaders">
+      <UniqueIdentifier>{3bf79c72-4e74-4cc6-a0a6-987dedfcd199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simulation">
+      <UniqueIdentifier>{e512fed9-d29b-46a3-a9db-6b827b618392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{43554aed-6894-46be-abad-b516c8e8afa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{43d41429-f952-4d8a-9aa8-b8abd922a8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\graphics">
+      <UniqueIdentifier>{b8cae696-8cfe-4ca3-bfd5-48bdbbb8d2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\graphics\shaders">
+      <UniqueIdentifier>{88b3d988-ad34-41a9-b2b4-812e35824415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\simulation">
+      <UniqueIdentifier>{347d103e-fc21-41e5-bb41-e51db34e07ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{2a8a2dd0-3f6b-4b75-bf2b-c9bfad2f4017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{692fb5ae-2992-47f3-8d6c-a124f2a59380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics">
+      <UniqueIdentifier>{246d1d00-d91a-44ab-9a78-51a196c9aa69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics\shaders">
+      <UniqueIdentifier>{b6a635c4-ca7d-426f-9aef-8599a93343d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics\geometry">
+      <UniqueIdentifier>{8f2f0898-cce3-483d-a432-63c7e619aa55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\graphics\geometry">
+      <UniqueIdentifier>{26749dcf-ba8d-4f92-bd7b-7a6410ab2c1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{eb0689a3-45a9-40a5-9a44-88b0b960da4e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultController.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraController.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHandler.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="HalfEdgeMesh.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\glad\src\glad.c">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="Drawable.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulation.cpp">
+      <Filter>Source Files\simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="Trackball.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjModel.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="Counter.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="Lines.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="LineLoop.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationDomain.cpp">
+      <Filter>Source Files\simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationLoader.cpp">
+      <Filter>Source Files\simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="GPUSimulation.cpp">
+      <Filter>Source Files\simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui_color_gradient.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec4.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Mat2.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Mat3.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Mat4.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Quaternion.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec2.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec3.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultShader.cpp">
+      <Filter>Source Files\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputeShader.cpp">
+      <Filter>Source Files\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorShader.cpp">
+      <Filter>Source Files\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="GridShader.cpp">
+      <Filter>Source Files\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicLibLoader.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui_draw.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui_impl_glfw.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui_tables.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="..\middleware\imgui\imgui_widgets.cpp">
+      <Filter>Resource Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="Nran.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="BVH.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="RDPG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdArgsParser.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceLocations.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="EventListener.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="BSpline.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorMap.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BSplinePatch.cpp">
+      <Filter>Source Files\graphics\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Drawable.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="HalfEdgeMesh.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjModel.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationDomain.h">
+      <Filter>Header Files\simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulation.h">
+      <Filter>Header Files\simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\stb_truetype.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\stb_textedit.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\stb_rect_pack.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Counter.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures.h">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Lines.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="LineLoop.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceLocations.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="LOG.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUSimulation.h">
+      <Filter>Header Files\simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationLoader.h">
+      <Filter>Header Files\simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imgui_color_gradient.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec4.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Mat2.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Mat3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Mat4.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Quaternion.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec2.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputeShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUGrid.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="GridShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshComputeShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="GridComputeShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ReactionDiffusionComputeShader.h">
+      <Filter>Header Files\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLibLoader.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imconfig.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imgui.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imgui_impl_glfw.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imgui_impl_opengl3.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imgui_internal.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imstb_rectpack.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imstb_textedit.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\middleware\imgui\imstb_truetype.h">
+      <Filter>Resource Files\external</Filter>
+    </ClInclude>
+    <ClInclude Include="Ply.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Nran.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="BVH.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdArgsParser.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="RDPG.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Curve.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="BSpline.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Trackball.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraController.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultController.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorMap.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BSplinePatch.h">
+      <Filter>Header Files\graphics\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\shaders\defaultVertex.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+    <None Include="..\res\shaders\defaultFragment.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+    <None Include="..\res\shaders\meshComputeShader.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+    <None Include="createDLL.bat">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\res\shaders\gridFragment.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+    <None Include="..\res\shaders\gridVertex.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+    <None Include="..\res\shaders\gridComputeShader.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+    <None Include="..\res\shaders\meshComputeShaderStochastic.glsl">
+      <Filter>Resource Files\glslShaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\res\SimConfig.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
