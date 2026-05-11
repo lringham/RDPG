@@ -21,6 +21,7 @@ public:
 
     void loadLib(const std::string& handleName);
     void freeLib();
+	bool initialized() const;
 
     template<typename T>
     T loadFunc(const std::string& funcName)

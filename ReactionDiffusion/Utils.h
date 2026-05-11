@@ -94,12 +94,12 @@ namespace Utils
         {
             batFile << R"(
 @ECHO =========================== Compiling PDEs ===========================
-@ECHO off
 
 SET simFileSource=PDES
 
-CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
-cl.exe %simFileSource%.cpp /EHa /LDd /MD /link /dll
+REM CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+CALL "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x64
+cl.exe %simFileSource%.cpp /std:c++17 /EHsc /LD /MD /O2
 
 DEL %simFileSource%.obj
 DEL %simFileSource%.exp

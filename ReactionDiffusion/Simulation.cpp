@@ -846,8 +846,10 @@ CustomReactionDiffusion::CustomReactionDiffusion(
     system("g++ -fPIC -shared PDES.cpp -o PDES.so");    
     dynamicLibLoader.loadLib("PDES.so");
 #endif
-
-    customSimFunc = dynamicLibLoader.loadFunc<Simulate>("simulate");
+	if (dynamicLibLoader.initialized())
+        customSimFunc = dynamicLibLoader.loadFunc<Simulate>("simulate");
+    else
+		LOG("Failed to load PDES library");
 }
 
 void CustomReactionDiffusion::doReloadSim()

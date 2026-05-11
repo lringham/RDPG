@@ -19,6 +19,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LocalDebuggerCommandArguments>ConfigFile=../res/SimConfig.txt</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArgumentsHistory>ConfigFile=../res/SimConfig.txt|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EigenDebug|x64'">
     <LocalDebuggerCommandArguments>ConfigFile=../res/SimConfig.txt RUNNING_IN_VS</LocalDebuggerCommandArguments>
@@ -31,5 +32,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LocalDebuggerCommandArguments>ConfigFile=../res/SimConfig.txt</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArgumentsHistory>ConfigFile=../res/SimConfig.txt|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
 </Project>
