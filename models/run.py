@@ -13,15 +13,28 @@ source_exe = (
 )
 
 if not source_exe.exists():
-    raise FileNotFoundError(f"Could not find {source_exe}. Please build RDPG in Release first.")
+    raise FileNotFoundError(
+        f"Could not find {source_exe}. Please build RDPG in Release first."
+    )
 
 # Optional frame output
 ENABLE_FRAME_OUTPUT = False
 FRAME_OUTPUT_FREQ = 99
 
-# Sequentially run B -> O
-for letter in map(chr, range(ord('B'), ord('O') + 1)):
-    target_dir = BASE_DIR / letter
+# Model directories
+model_dirs = [chr(c) for c in range(ord('B'), ord('O') + 1)]
+model_dirs += [
+    "202512_Figure6",
+    "Prepatterns",
+]
+
+# Sequentially run models
+for model in model_dirs:
+    target_dir = BASE_DIR / model
+
+    if not target_dir.exists():
+        print(f"Skipping missing directory: {target_dir}")
+        continue
 
     target_exe = target_dir / source_exe.name
     shutil.copy2(source_exe, target_exe)
@@ -32,7 +45,7 @@ for letter in map(chr, range(ord('B'), ord('O') + 1)):
         str(target_exe),
         "Run",
         "SaveOnExit",
-	"Steps=200000"
+        "Steps=200000",
     ]
 
     if ENABLE_FRAME_OUTPUT:
@@ -44,4 +57,4 @@ for letter in map(chr, range(ord('B'), ord('O') + 1)):
         cwd=target_dir,
     )
 
-    print(f"Finished {letter} with return code {result.returncode}")
+    print(f"Finished {model} with return code {result.returncode}")
