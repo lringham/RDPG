@@ -1,0 +1,86 @@
+# SimStep = 0
+# description
+pauseAt: 200000
+
+### file paths ###
+ModelsPath: ./
+ColorMapsPath: ./
+ShadersPath: ./shaders/
+
+### Camera position and lookAt ###
+camera: 0.29945 -0.13575 307.199 0.29945 -0.13575 0
+
+### Model orientation X, Y, Z ###
+model: 0.995903 0.0646913 0.0629077 -0.0798738 0.956363 0.281018 -0.0419839 -0.284897 0.95763
+#backgroundTexture: ..\background.png
+
+### Growth parameters ###
+maxFaceArea: 0.582001
+growing: false
+growthX: 0
+growthY: 0
+growthZ: 0
+growthTickLimit: 0
+
+### Morphogens and domain info ###
+morphogens: A, S, C, H, P, V
+#domain: B.ply
+#simFile: newB.rd
+domain: J.ply
+simFile: newJ.rd
+colorMap: monkeyflower.colors
+
+### Parameters, PDEs, and Initial Conditions ###
+params:
+{
+	indices: 0 - 58561
+	Da: 0.025
+	Dc: 0
+	Dh: 10
+	Ds: 0
+	dt: 0.002
+	gamma_p: 0.03
+	#gamma_v: 0.55
+	gamma_v: 0.8
+	mu_a: 0.25
+	mu_c: 0.5
+	mu_h: 0.2
+	mu_s: 0.5
+	rho_a: 1.5
+	rho_c: 0
+	rho_h: 12
+	rho_s: 0.03
+	sigma_a: 0.001
+	sigma_h: 0
+	sigma_s: 0.025
+	theta_a: 2.5
+	theta_h: 1
+}
+initialConditions:
+{
+	indices: all
+	A: 0
+	S: rand(0.0, 1.0)
+	C: 0
+	H: 0
+	P: 0
+	V: 0
+}
+rdModel: GPU
+{
+	float aas = a*a*s;
+	float hhs = h*h*s;
+	
+	float newA = a + (rho_a*c - 2*theta_a*aas                   + sigma_a + gamma_p*p - mu_a*a + Da*L[A])*dt;
+	float newH = h + (rho_h*c                   - 2*theta_h*hhs + sigma_h               - mu_h*h + Dh*L[H])*dt;
+	float newS = s + (rho_s*c -   theta_a*aas   -   theta_h*hhs + sigma_s + gamma_v*v  - mu_s*s + Ds*L[S])*dt;
+	float newC = c + (rho_c*c +   theta_a*aas                                           - mu_c*c + Dc*L[C])*dt;
+	if (newA < 0.0) { newA = 0.0; }
+	if (newH < 0.0) { newH = 0.0; }
+	if (newS < 0.0) { newS = 0.0; }
+	if (newC < 0.0) { newC = 0.0; }
+	new[A] = newA;
+	new[H] = newH;
+	new[S] = newS;
+	new[C] = newC;
+}

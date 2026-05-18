@@ -1,0 +1,6 @@
+normCoef: 0.5
+visibleMorph: 2
+backgroundThreshold: 0.5
+backgroundOffset: 0.5
+background: 53 53 53
+wireframe: 0

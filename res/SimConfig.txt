@@ -45,7 +45,7 @@ initialConditions:
     T: 0
 
 }
-rdModel: CPU
+rdModel: GPU
 {
     Prepattern p;
     Morphogens a, s, t;
